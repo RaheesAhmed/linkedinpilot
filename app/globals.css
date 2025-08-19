@@ -1,3 +1,5 @@
+/* Import Fonts - Professional SaaS Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -6,7 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-manrope);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -41,75 +44,143 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+  /* LinkedinPilot Custom Brand Colors */
+  --color-linkedin-blue: var(--linkedin-blue);
+  --color-pilot-accent: var(--pilot-accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-gradient-start: var(--gradient-start);
+  --color-gradient-end: var(--gradient-end);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  /* LinkedinPilot Professional Theme */
+  --radius: 0.75rem;
+  
+  /* Base Colors - Clean & Professional */
+  --background: oklch(0.99 0.002 106.35); /* Off-white with subtle warmth */
+  --foreground: oklch(0.15 0.005 264.05); /* Deep navy blue for text */
+  
+  /* Card & Surface Colors */
+  --card: oklch(1 0 0); /* Pure white cards */
+  --card-foreground: oklch(0.15 0.005 264.05);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --popover-foreground: oklch(0.15 0.005 264.05);
+  
+  /* Primary - LinkedIn Blue with Pilot Authority */
+  --primary: oklch(0.45 0.15 243.58); /* Professional LinkedIn-inspired blue */
+  --primary-foreground: oklch(0.98 0 0);
+  
+  /* Secondary - Pilot Orange Accent */
+  --secondary: oklch(0.92 0.02 88.64); /* Light orange/amber background */
+  --secondary-foreground: oklch(0.25 0.08 58.29); /* Dark orange text */
+  
+  /* Muted Colors */
+  --muted: oklch(0.955 0.005 264.05); /* Light blue-gray */
+  --muted-foreground: oklch(0.55 0.01 264.05); /* Medium blue-gray */
+  
+  /* Accent - Pilot Orange */
+  --accent: oklch(0.68 0.18 58.29); /* Vibrant pilot orange */
+  --accent-foreground: oklch(0.98 0 0);
+  
+  /* Status Colors */
+  --destructive: oklch(0.65 0.25 25.44); /* Professional red */
+  --success: oklch(0.58 0.15 142.5); /* LinkedIn green */
+  --warning: oklch(0.75 0.15 58.29); /* Pilot amber */
+  
+  /* Interface Elements */
+  --border: oklch(0.9 0.005 264.05); /* Subtle blue-gray border */
+  --input: oklch(0.96 0.005 264.05); /* Light input background */
+  --ring: oklch(0.45 0.15 243.58); /* Focus ring matches primary */
+  
+  /* Chart Colors - Professional Palette */
+  --chart-1: oklch(0.45 0.15 243.58); /* Primary blue */
+  --chart-2: oklch(0.68 0.18 58.29); /* Pilot orange */
+  --chart-3: oklch(0.58 0.15 142.5); /* Success green */
+  --chart-4: oklch(0.62 0.15 325.83); /* Professional purple */
+  --chart-5: oklch(0.55 0.12 195.87); /* Teal accent */
+  
+  /* Sidebar */
+  --sidebar: oklch(0.97 0.005 264.05); /* Light blue-gray */
+  --sidebar-foreground: oklch(0.15 0.005 264.05);
+  --sidebar-primary: oklch(0.45 0.15 243.58);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.92 0.02 88.64);
+  --sidebar-accent-foreground: oklch(0.25 0.08 58.29);
+  --sidebar-border: oklch(0.9 0.005 264.05);
+  --sidebar-ring: oklch(0.45 0.15 243.58);
+  
+  /* Custom LinkedinPilot Brand Colors */
+  --linkedin-blue: oklch(0.45 0.15 243.58);
+  --pilot-accent: oklch(0.68 0.18 58.29);
+  --gradient-start: oklch(0.45 0.15 243.58);
+  --gradient-end: oklch(0.68 0.18 58.29);
+  
+  /* Typography Variables */
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-manrope: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* LinkedinPilot Dark Theme - Professional & Modern */
+  --background: oklch(0.11 0.005 264.05); /* Deep navy background */
+  --foreground: oklch(0.95 0.005 264.05); /* Light blue-white text */
+  
+  /* Card & Surface Colors */
+  --card: oklch(0.15 0.01 264.05); /* Dark blue-gray cards */
+  --card-foreground: oklch(0.95 0.005 264.05);
+  --popover: oklch(0.15 0.01 264.05);
+  --popover-foreground: oklch(0.95 0.005 264.05);
+  
+  /* Primary - Brighter LinkedIn Blue for dark mode */
+  --primary: oklch(0.65 0.2 243.58); /* Brighter LinkedIn blue */
+  --primary-foreground: oklch(0.05 0.005 264.05);
+  
+  /* Secondary - Muted Pilot Orange */
+  --secondary: oklch(0.25 0.03 58.29); /* Dark orange background */
+  --secondary-foreground: oklch(0.85 0.08 58.29); /* Light orange text */
+  
+  /* Muted Colors */
+  --muted: oklch(0.2 0.01 264.05); /* Dark blue-gray */
+  --muted-foreground: oklch(0.7 0.01 264.05); /* Medium light gray */
+  
+  /* Accent - Vibrant Pilot Orange */
+  --accent: oklch(0.75 0.2 58.29); /* Bright pilot orange */
+  --accent-foreground: oklch(0.05 0.005 264.05);
+  
+  /* Status Colors */
+  --destructive: oklch(0.7 0.25 25.44); /* Bright professional red */
+  --success: oklch(0.65 0.15 142.5); /* Bright LinkedIn green */
+  --warning: oklch(0.8 0.18 58.29); /* Bright pilot amber */
+  
+  /* Interface Elements */
+  --border: oklch(0.25 0.01 264.05); /* Dark border */
+  --input: oklch(0.18 0.01 264.05); /* Dark input background */
+  --ring: oklch(0.65 0.2 243.58); /* Focus ring matches primary */
+  
+  /* Chart Colors - Dark Mode Optimized */
+  --chart-1: oklch(0.65 0.2 243.58); /* Primary blue */
+  --chart-2: oklch(0.75 0.2 58.29); /* Pilot orange */
+  --chart-3: oklch(0.65 0.15 142.5); /* Success green */
+  --chart-4: oklch(0.7 0.18 325.83); /* Professional purple */
+  --chart-5: oklch(0.65 0.15 195.87); /* Teal accent */
+  
+  /* Sidebar */
+  --sidebar: oklch(0.13 0.008 264.05); /* Darker sidebar */
+  --sidebar-foreground: oklch(0.9 0.005 264.05);
+  --sidebar-primary: oklch(0.65 0.2 243.58);
+  --sidebar-primary-foreground: oklch(0.05 0.005 264.05);
+  --sidebar-accent: oklch(0.25 0.03 58.29);
+  --sidebar-accent-foreground: oklch(0.85 0.08 58.29);
+  --sidebar-border: oklch(0.25 0.01 264.05);
+  --sidebar-ring: oklch(0.65 0.2 243.58);
+  
+  /* Custom LinkedinPilot Brand Colors - Dark Mode */
+  --linkedin-blue: oklch(0.65 0.2 243.58);
+  --pilot-accent: oklch(0.75 0.2 58.29);
+  --gradient-start: oklch(0.65 0.2 243.58);
+  --gradient-end: oklch(0.75 0.2 58.29);
 }
 
 @layer base {
@@ -118,5 +189,102 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-inter);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  
+  /* Typography Enhancements */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-manrope);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 650;
+    letter-spacing: -0.03em;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* LinkedinPilot Custom Components - Tailwind CSS 4 Compatible */
+  .pilot-gradient {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  }
+  
+  .pilot-gradient-text {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary); }
+    50% { box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary); }
+  }
+  
+  /* Responsive Typography */
+  .text-pilot-xl {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+  
+  .text-pilot-lg {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.2;
+    font-weight: 650;
+    letter-spacing: -0.03em;
+  }
+  
+  /* Professional Spacing */
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-pilot {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
