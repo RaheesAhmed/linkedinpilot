@@ -100,32 +100,35 @@ const plans = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="section-padding bg-muted/30">
-      <div className="container-pilot">
-        <div className="text-center space-y-4 mb-16">
-          <Badge variant="outline" className="bg-accent/10 text-accent border-accent/20">
-            <Star className="mr-2 h-4 w-4" />
-            Pricing
-          </Badge>
-          <h2 className="text-pilot-lg pilot-gradient-text">
+    <section id="pricing" className="py-24 px-4 bg-slate-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center space-y-6 mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 rounded-full text-sm text-purple-700 font-medium">
+            <Star className="w-4 h-4" />
+            Pricing Plans
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
             Choose Your LinkedIn Growth Plan
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Start with our free trial, then choose the plan that fits your needs. 
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            Start with our free trial, then choose the plan that fits your business needs. 
             All plans include our core AI automation features.
           </p>
         </div>
 
         {/* Pricing Toggle Note */}
         <div className="text-center mb-12">
-          <Card className="bg-card text-card-foreground rounded-lg border shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-1 p-4 max-w-md mx-auto bg-primary/5 border-primary/20">
-            <p className="text-sm text-primary font-medium">
-              🎉 7-day free trial available for all plans
+          <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-6 max-w-lg mx-auto">
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <p className="text-lg text-green-800 font-bold">
+                🎉 7-Day Free Trial Available
+              </p>
+            </div>
+            <p className="text-green-700 font-medium">
+              No credit card required • Cancel anytime • Full feature access
             </p>
-            <p className="text-xs text-muted-foreground mt-1">
-              No credit card required • Cancel anytime
-            </p>
-          </Card>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -153,28 +156,28 @@ export function PricingSection() {
                 <CardHeader className="text-center pb-8 pt-6">
                   <div className="space-y-4">
                     <div className={`p-3 rounded-xl mx-auto w-fit ${
-                      plan.popular ? 'pilot-gradient' : 'bg-muted'
+                      plan.popular ? 'bg-blue-600' : 'bg-slate-100'
                     }`}>
                       <IconComponent className={`h-6 w-6 ${
-                        plan.popular ? 'text-white' : 'text-muted-foreground'
+                        plan.popular ? 'text-white' : 'text-slate-600'
                       }`} />
                     </div>
                     <div>
-                      <CardTitle className="text-xl font-display mb-2">
+                      <CardTitle className="text-xl font-bold text-slate-900 mb-2">
                         {plan.name}
                       </CardTitle>
                       <div className="space-y-1">
                         <div className="flex items-baseline justify-center">
-                          <span className="text-3xl font-bold pilot-gradient-text">
+                          <span className="text-3xl font-bold text-blue-600">
                             {plan.price}
                           </span>
-                          <span className="text-sm text-muted-foreground ml-1">
+                          <span className="text-sm text-slate-500 ml-1">
                             /{plan.period}
                           </span>
                         </div>
                       </div>
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-slate-600 leading-relaxed">
                       {plan.description}
                     </p>
                   </div>
@@ -184,8 +187,8 @@ export function PricingSection() {
                   <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start space-x-3">
-                        <Check className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground leading-relaxed">
+                        <Check className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-slate-600 leading-relaxed">
                           {feature}
                         </span>
                       </li>
@@ -195,11 +198,11 @@ export function PricingSection() {
                   <Button 
                     className={`w-full ${
                       plan.popular 
-                        ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-md' 
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                         : plan.name === 'Enterprise'
-                        ? 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-md'
-                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-md'
-                    }`}
+                        ? 'bg-purple-600 hover:bg-purple-700 text-white'
+                        : 'bg-slate-600 hover:bg-slate-700 text-white'
+                    } rounded-xl font-semibold`}
                     size="lg"
                   >
                     {plan.cta}
@@ -213,33 +216,31 @@ export function PricingSection() {
         {/* FAQ / Additional Info */}
         <div className="mt-16 text-center space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <Card className="bg-card text-card-foreground rounded-lg border shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-1 p-6">
+            <div className="bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 p-6">
               <div className="space-y-3">
-                <h4 className="font-semibold font-display">🔒 Secure & Safe</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-semibold text-slate-900">🔒 Secure & Safe</h4>
+                <p className="text-sm text-slate-600">
                   Conservative automation limits and human-like behavior patterns protect your LinkedIn account.
                 </p>
               </div>
-            </Card>
-            <Card className="bg-card text-card-foreground rounded-lg border shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-1 p-6">
+            </div>
+            <div className="bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 p-6">
               <div className="space-y-3">
-                <h4 className="font-semibold font-display">📈 Guaranteed Results</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-semibold text-slate-900">📈 Guaranteed Results</h4>
+                <p className="text-sm text-slate-600">
                   See 3x+ engagement increase within 30 days or get a full refund.
                 </p>
               </div>
-            </Card>
-            <Card className="bg-card text-card-foreground rounded-lg border shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-1 p-6">
+            </div>
+            <div className="bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 p-6">
               <div className="space-y-3">
-                <h4 className="font-semibold font-display">🎯 Open Source</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-semibold text-slate-900">🎯 Open Source</h4>
+                <p className="text-sm text-slate-600">
                   Self-host for free or use our managed service. MIT license, fully transparent.
                 </p>
               </div>
-            </Card>
+            </div>
           </div>
-
-          
         </div>
       </div>
     </section>
