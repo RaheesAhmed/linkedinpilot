@@ -1,6 +1,16 @@
 # LinkedinPilot 🚁
 
-Transform your LinkedIn presence from boring to high-converting with AI-powered automation.
+> [!WARNING]  
+> **🚧 THIS PLATFORM IS UNDER ACTIVE DEVELOPMENT PHASE 🚧**
+> 
+> We're working hard to bring you the best LinkedIn automation experience! 
+> ⭐ **Star this repo** to stay updated on our progress
+> 📧 **Questions?** Reach out to [rahesahmed37@gmail.com](mailto:rahesahmed37@gmail.com)
+
+
+**Transform your LinkedIn presence from boring to high-converting with AI-powered automation.**
+
+
 
 ## 🎯 What is LinkedinPilot?
 
