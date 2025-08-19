@@ -6,6 +6,7 @@
 .pnp.*
 .yarn/*
 !.yarn/patches
+plan.md
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
@@ -28,10 +29,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/langgraph/
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.env
 
 # vercel
 .vercel
