@@ -101,7 +101,7 @@ export function Header() {
               </Link>
               <div className="flex flex-col space-y-3 pt-4">
                 <Link href="https://github.com/RaheesAhmed/linkedinpilot" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="sm" className="w-full">
+                  <Button variant="outline" size="sm" className="w-full border-slate-300 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                     <Github className="w-4 h-4 mr-2" />
                     Star on GitHub
                   </Button>

@@ -62,7 +62,7 @@ export function CTASection() {
                 </button>
                 
                 <Link href="https://github.com/RaheesAhmed/linkedinpilot" target="_blank" rel="noopener noreferrer">
-                  <button className="border-2 border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all flex items-center gap-3">
+                  <button className="border-2 border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-slate-100 px-12 py-6 text-xl font-bold rounded-2xl transition-all flex items-center gap-3">
                     <Github className="h-6 w-6" />
                     View Source Code
                     <Star className="h-6 w-6" />
