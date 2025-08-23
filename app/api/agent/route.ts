@@ -73,7 +73,7 @@ export async function GET() {
     const tools = linkedInAgent.getAvailableTools();
     return NextResponse.json({ 
       status: 'LinkedIn Pilot Agent is ready',
-      availableTools: tools.length,
+      availableTools: tools,
       tools: tools
     });
   } catch (error) {
