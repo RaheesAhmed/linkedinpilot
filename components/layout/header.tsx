@@ -40,6 +40,12 @@ export function Header() {
             <Link href="#pricing" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
               Pricing
             </Link>
+            <Link href="/demo" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
+              Demo
+            </Link>
+            <Link href="/chat" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
+              Chat
+            </Link>
             <Link href="https://github.com/RaheesAhmed/linkedinpilot" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">
               GitHub
             </Link>
@@ -91,6 +97,20 @@ export function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
+              </Link>
+              <Link 
+                href="/demo" 
+                className="text-slate-600 hover:text-blue-600 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Demo
+              </Link>
+              <Link 
+                href="/chat" 
+                className="text-slate-600 hover:text-blue-600 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Chat
               </Link>
               <Link 
                 href="https://github.com/RaheesAhmed/linkedinpilot" 
